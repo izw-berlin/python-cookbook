@@ -10,26 +10,38 @@ is not unusal to use single-letter-names for runnig variables in for-loops (iter
 It is in general a good idea to follow the conventions of the used lanugage for
 the definition style of identifiers:
 
-### Names for constant values
-Use upper case snake-style : THIS_IS_A_CONST_VALUE
 
-### Names for classes
-Use camel-case : MyClass
+|Type of identifier|Style                  |Example              |
+|------------------|-----------------------|---------------------|
+|Constant values   |upper case snake-style |THIS_IS_A_CONST_VALUE|
+|Classes           |camel-case             |MyClass              |
+|other identifiers |lower case snake-style |this_is_a_normal_name|
+|Protected attributes (variables, fields, function, methods *|Use a leading underscore | _this_is_protected|
 
-### Names for all other identifiers
-Use lower case snake-style : this_is_a_normal_name
-
-### Protected attributes (variables, fields, function, methods)
-Use a leading underscore : _this_is_protected
+* The use of a leading underscore for protected identifiers is only a 
+convention in Python and is of no meaning to the compiler/interpreter. 
 
 ## Function arguments
 
 
 ## Global variables
 Do not use global variables to pass values from one function to another.
-Global variables should only used for a true global state ofa modul/program.
+Global variables should only used for a true global state of a modul/program.
 
-In general less globals is better.
+Global variables should only modified by global code, never as side-effect of
+functions
+
+In general, less global variables is better.
+
+## Code formatting
+Code formatting is an area that is highly dominated by personal preferences. Do not try
+to push your preferences to others. I you work as a contributor on some project, follow
+the formatting of the original author or lead maintainer.
+
+But stay consistent in your code. 
+
+Most IDEs have a function to auto format the code. Go to to the settings in the IDE for the
+code formatting, adjust to your personal prefernces and then use the auto format feature.
 
 
 
